@@ -237,6 +237,35 @@
 }
 
 
+
+
+
+
+
+.product-item img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.product-item:hover img {
+    transform: scale(1.1) rotate(3deg); /* Slight zoom and rotation on hover */
+}
+
+/* Optional: Keyframe animation */
+@keyframes zoom-in-zoom-out {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.product-item img.zoom-animation {
+    animation: zoom-in-zoom-out 2s ease-in-out infinite;
+}
+
+
+
+
+
+
 .section-title::after {
     position: absolute;
     content: "";
