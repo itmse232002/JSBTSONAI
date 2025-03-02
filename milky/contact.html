@@ -87,7 +87,7 @@
                         <a href="../milky/gallery.html" class="dropdown-item">Portfolio</a>
                         <a href="../milky/feature.html" class="dropdown-item">Facets</a>
                         <a href="../milky/team.html" class="dropdown-item">The Collective</a>
-                        <a href="../milky/testimonial.html" class="dropdown-item">Review</a>
+                        <a href="../milky/testimonial.html" class="dropdown-item">Esteemed</a>
                         <a href="../milky/404.html" class="dropdown-item">The Head</a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#" style="color: black;">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#" style="color: black;">Portions</a></li>
+                 
                     <li class="breadcrumb-item active" style="color: black;" aria-current="page">Contact</li>
                 </ol>
             </nav>
@@ -128,46 +128,108 @@
                       <br>  Amit Sigchi: +91 99335 46572<br>
                         Govind Sigchi: +91 81167 57173 <br>
                         We’re here to assist you.</p>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control border-dark" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <!-- Name Field -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-dark" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name <span class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                        
+                                <!-- Email Field -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-dark" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email <span class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                        
+                                <!-- Phone Field -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-dark" id="phone" placeholder="Phone (+91)" pattern="\d{10}" 
+                                            title="Phone number should be exactly 10 digits" required>
+                                        <label for="phone">Phone <span class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                        
+                                <!-- Subject Field -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-dark" id="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject <span class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                        
+                                <!-- Message Field -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-dark" placeholder="Leave a message here" id="message"
+                                            style="height: 250px" maxlength="1800" minlength="2" required></textarea>
+                                        <label for="message">Message <span class="text-danger">*</span></label>
+                                        <small class="form-text text-muted position-absolute end-0 me-3">Max: 1800</small>
+                                    </div>
+                                </div>
+                        
+                                <!-- Send Message Button (Initially Disabled) -->
+                                <div class="col-12">
+                                    <button class="btn btn-secondary rounded-pill py-3 px-5" id="sendMessageBtn" disabled>
+                                        Send Message
+                                    </button>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control border-dark" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                        </form>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="messageModalLabel">Reachout</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Kindly reach out to us directly at jaishreebalajeetraders0305@gmail.com or contact us via the provided phone numbers. Thank you.
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control border-dark" id="phone" placeholder="Phone (+91)" pattern="\d{10}" title="Phone number should be exactly 10 digits" required>
-                                    <label for="phone">Phone</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control border-dark" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control border-dark" placeholder="Leave a message here" id="message"
-                                        style="height: 250px" maxlength="1800" minlength="300"></textarea>
-                                    <label for="message">Message</label>
-                                    <small class="form-text text-muted position-absolute end-0 me-3">Min: 300, Max: 1800</small>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-secondary rounded-pill py-3 px-5" type="submit">Send
-                                    Message</button>
                             </div>
                         </div>
-                    </form>
+                        
+                        <!-- JavaScript to Enable Button, Show Modal & Reset Form -->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const form = document.getElementById("contactForm");
+                                const sendButton = document.getElementById("sendMessageBtn");
+                        
+                                form.addEventListener("input", function () {
+                                    let isValid = true;
+                                    form.querySelectorAll("input, textarea").forEach((input) => {
+                                        if (!input.value.trim()) {
+                                            isValid = false;
+                                        }
+                                    });
+                                    sendButton.disabled = !isValid;
+                                });
+                        
+                                sendButton.addEventListener("click", function (event) {
+                                    event.preventDefault(); // Prevents form submission
+                                    if (!sendButton.disabled) {
+                                        const modal = new bootstrap.Modal(document.getElementById('messageModal'));
+                                        modal.show();
+                                    }
+                                });
+                        
+                                // Reset form when modal is closed
+                                document.getElementById('messageModal').addEventListener('hidden.bs.modal', function () {
+                                    form.reset();
+                                    sendButton.disabled = true; // Disable the button again after reset
+                                });
+                            });
+                        </script>
+                        
+                        
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <h3 class="mb-4">Contact Details</h3>
@@ -177,7 +239,7 @@
                         </div>
                         <div class="ms-3">
                             <h6>Our Office</h6>
-                            <span>123 Street, New York, USA</span>
+                            <span>Kamala Vatika Satellite Township, Fulbari, Siliguri, West Bengal - 734004</span>
                         </div>
                     </div>
                     <div class="d-flex border-bottom pb-3 mb-3">
@@ -195,17 +257,23 @@
                         </div>
                         <div class="ms-3">
                             <h6>Mail Us</h6>
-                            <span>info@example.com</span>
+                            <span>jaishreebalajeetraders0305@gmail.com</span>
                         </div>
                     </div>
-                    <iframe class="w-100 rounded"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14261.906319704083!2d88.40947621546458!3d26.665236341199794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e44395dc0279e7%3A0xacd1020056eb9b26!2sFulbari%2C%20West%20Bengal%20734004!5e0!3m2!1sen!2sin!4v1740765841138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                       
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
     <!-- Contact End -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -213,9 +281,50 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 99335 46572    </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-map-marker-alt me-3 mt-1"></i>
+                        <p class="mb-2">Kamala Vatika Satellite Township, Fulbari, Siliguri, West Bengal - 734004</p>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-phone-alt me-3 mt-1"></i>
+                        <p class="mb-2">+91 99335 46572, <br>
+                            +91 81167 57173</p>
+                    </div>
+                    <!-- Clickable Email Link -->
+<div class="d-flex align-items-start">
+    <i class="fa fa-envelope me-3 mt-1"></i>
+    <p class="mb-2">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#emailModal" class="text-white"><h5>Click here</h5></a>
+    </p>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emailModalLabel">Email Address</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p style="color: black; font-size: 18px; font-weight: bold;" id="emailText">
+                    jaishreebalajeetraders0305@gmail.com
+                </p>
+                <button class="btn btn-primary" onclick="copyEmail()">Copy Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to Copy Email -->
+<script>
+    function copyEmail() {
+        let emailText = document.getElementById("emailText").innerText;
+        navigator.clipboard.writeText(emailText);
+        alert("Email copied to clipboard!");
+    }
+</script>
+                    
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/sonaimilk/"><i
                             class="fab fa-facebook-f"></i></a>
@@ -236,7 +345,54 @@
                     <a class="btn btn-link" href="../milky/about.html">Who We Are</a>
                     <a class="btn btn-link" href="../milky/product.html">Products</a>
                     <a class="btn btn-link" href="../milky/service.html">Offerings</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Condition</a>
+                    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                   
+
+                                    <h5 style="color: black; font-weight: bold;">1. Introduction</h5>
+                                    <p>Welcome to Jai Shree Balajee Traders (JSBT). By accessing our website and purchasing our products, you agree to abide by the following terms and conditions.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">2. Products and Services</h5>
+                                    <p>We offer a range of dairy products, subject to availability. Prices and product details are subject to change without prior notice.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">3. Orders and Cancellations</h5>
+                                    <p>Orders can be placed through our website. We reserve the right to accept or reject orders at our discretion. Cancellations must be made within a specified timeframe, as mentioned in our cancellation policy.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">4. Delivery</h5>
+                                    <p>Delivery times may vary based on location and availability. We strive to ensure timely delivery but are not responsible for delays due to unforeseen circumstances.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">5. Refunds and Returns</h5>
+                                    <p>If you receive a damaged or incorrect product, you may be eligible for a refund or replacement as per our return policy. Refunds will be processed within a reasonable timeframe.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">6. User Responsibilities</h5>
+                                    <p>Users are required to provide accurate information when applying for distributorship. Any misuse of the website, including fraudulent activities, may lead to account suspension.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">7. Privacy Policy</h5>
+                                    <p>We respect your privacy and ensure the protection of your personal information. For more details, please refer to our Privacy Policy.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">8. Limitation of Liability</h5>
+                                    <p>We are not liable for any indirect, incidental, or consequential damages arising from the use of our products or services.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">9. Changes to Terms</h5>
+                                    <p>We reserve the right to update these terms and conditions at any time. Continued use of our website implies acceptance of any modifications.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">10. Contact Information</h5>
+                                    <p>For any queries or concerns, please contact us at <a href="mailto:jaishreebalajeetraders0305@gmail.com">jaishreebalajeetraders0305@gmail.com</a>.</p>
+                            
+                                    <p>Founder: Amit Sigchi</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a class="btn btn-link" href="../milky/contact.html">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -266,7 +422,8 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                   
-                    Remodel By <a class="fw-semi-bold" href="https://www.linkedin.com/in/rishabh-mohata-b571142a4//"><b style="color: black;">Rishabh Mohata</b></a>     
+                    Remodel By <a class="fw-semi-bold" href="https://www.linkedin.com/in/rishabh-mohata-b571142a4//"><b style="color: black;">Rishabh Mohata</b></a> 
+                      
                 </div>
             </div>
         </div>
@@ -287,5 +444,10 @@
     <script src="../milky/lib/lightbox/js/lightbox.min.js"></script>
     <!-- Template Javascript -->
     <script src="../milky/js/main.js"></script>
+    <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </body>
 </html>

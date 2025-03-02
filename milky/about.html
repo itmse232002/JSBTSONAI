@@ -87,7 +87,7 @@
                         <a href="../milky/gallery.html" class="dropdown-item">Portfolio</a>
                         <a href="../milky/feature.html" class="dropdown-item">Facets</a>
                         <a href="../milky/team.html" class="dropdown-item">The Collective</a>
-                        <a href="../milky/testimonial.html" class="dropdown-item">Review</a>
+                        <a href="../milky/testimonial.html" class="dropdown-item">Esteemed</a>
                         <a href="../milky/404.html" class="dropdown-item">The Head</a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#" style="color: black;">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#" style="color: black;">Portions</a></li>
+                  
                     <li class="breadcrumb-item active" style="color: black;" aria-current="page">Who We Are</li>
                 </ol>
             </nav>
@@ -187,7 +187,7 @@
                                 <div class="text-center bg-primary py-5 px-4">
                                     <img class="img-fluid mb-4" src="img/experience.png" alt="">
                                     <h1 class="display-6 text-white" data-toggle="counter-up">22</h1>
-                                    <span class="fs-5 fw-semi-bold text-secondary">Decades of Experience</span>
+                                    <span class="fs-5 fw-semi-bold text-secondary">Years of Experience</span>
                                 </div>
                             </div>
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
@@ -294,59 +294,162 @@
     <!-- Banner End -->
     <!-- Team Start -->
     
-  <!-- Team Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="section-title bg-white text-center text-primary px-3">The Collective</p>
-            <h1 class="mb-5">The Visionary Team</h1>
-        </div>
-        <div class="row g-4">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="section-title bg-white text-center text-primary px-3">The Collective</p>
+                <h1 class="mb-5">The Visionary Team</h1>
+            </div>
             
-            <!-- Amit Sigchi -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item rounded p-4" onclick="openCard('amit')">
-                    <img class="img-fluid rounded mb-4" src="img/team-1.jpg" alt="">
-                    <h5>Amit Sigchi</h5>
-                    <p class="text-primary">Founder & CEO</p>
-                    <div class="d-flex justify-content-center w-100">
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/share/159GiZEstx/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.instagram.com/amitsigchi?igsh=MWNydnQ5b3loYW9vMA=="><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+            <style>
+                .team-item img {
+                    transition: transform 0.3s ease-in-out;
+                }
+            
+                .team-item:hover img {
+                    transform: scale(1.1);
+                }
+            </style>
+           
+            <div class="row g-4">
+                
+             
+               <!-- Team Member Card for Amit Sigchi -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="team-item rounded p-4" onclick="openCard('amit')">
+            <img class="img-fluid rounded mb-4" src="img/amit.jpg" alt="">
+            <h5>Amit Sigchi</h5>
+            <p class="text-primary">Founder & CEO</p>
+            <div class="d-flex justify-content-center w-100">
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/share/159GiZEstx/"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.instagram.com/amitsigchi?igsh=MWNydnQ5b3loYW9vMA=="><i class="fab fa-instagram"></i></a>
+                
+                <!-- Email Icon to Open Modal -->
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="#" data-bs-toggle="modal" data-bs-target="#emailModalAmit">
+                    <i class="fa fa-envelope"></i>
+                </a>
             </div>
-
-            <!-- Govind Sigchi -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item rounded p-4" onclick="openCard('govind')">
-                    <img class="img-fluid rounded mb-4" src="img/team-2.jpg" alt="">
-                    <h5>Govind Sigchi</h5>
-                    <p class="text-primary">CMO & COO</p> 
-                    
-                        <div class="d-flex justify-content-center w-100">
-                            <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/share/18aD6CPxn5/"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.instagram.com/sigchigovind?igsh=d3N4Z3VqanhrNHVz"><i class="fab fa-instagram"></i></a>
-                        </div>
-                       
-                   
+        </div>
+    </div>
+    
+    <!-- Bootstrap Email Modal for Amit -->
+    <div class="modal fade" id="emailModalAmit" tabindex="-1" aria-labelledby="emailModalAmitLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailModalAmitLabel">Contact Amit Sigchi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-
-            <!-- Anand Kumar Ray -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item rounded p-4" onclick="openCard('anand')">
-                    <img class="img-fluid rounded mb-4" src="img/team-3.jpg" alt="">
-                    <h5>Anand Kumar Ray</h5>
-                    <p class="text-primary">CFO</p>
-                    <div class="d-flex justify-content-center w-100">
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/sonaimilk/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.instagram.com/sonaidairy/?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
-                    </div>
+                <div class="modal-body">
+                    <p>Email: <strong>jaishreebalajeetraders0305@gmail.com</strong></p>
+                    <p>Click below to copy the email:</p>
+                    <button class="btn btn-primary" onclick="copyEmailAmit()">Copy Email</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    
+    <!-- JavaScript for Copying Amit's Email -->
+    <script>
+        function copyEmailAmit() {
+            navigator.clipboard.writeText("amit@gmail.com");
+            alert("Email copied to clipboard!");
+        }
+    </script>
+    
+    
+                <!-- Govind Sigchi -->
+               <!-- Team Member Card -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="team-item rounded p-4" onclick="openCard('govind')">
+            <img class="img-fluid rounded mb-4" src="img/govind.jpg" alt="">
+            <h5>Govind Sigchi</h5>
+            <p class="text-primary">CMO & COO</p> 
+    
+            <div class="d-flex justify-content-center w-100">
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/share/18aD6CPxn5/"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.instagram.com/sigchigovind?igsh=d3N4Z3VqanhrNHVz"><i class="fab fa-instagram"></i></a>
+                <!-- Email Icon to Open Modal -->
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="#" data-bs-toggle="modal" data-bs-target="#emailModal">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Email Modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailModalLabel">Contact Govind Sigchi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Email: <strong>govind.sigchi@gmail.com</strong></p>
+                    <p>Click below to copy the email:</p>
+                    <button class="btn btn-primary" onclick="copyEmail()">Copy Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript for Copying Email -->
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("huy@gmail.com");
+            alert("Email copied to clipboard!");
+        }
+    </script>
+    
+    
+                <!-- Anand Kumar Ray -->
+    <!-- Team Member Card -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="team-item rounded p-4" onclick="openCard('anand')">
+            <img class="img-fluid rounded mb-4" src="img/anand.jpg" alt="">
+            <h5>Anand Kumar Ray</h5>
+            <p class="text-primary">CFO</p>
+            <div class="d-flex justify-content-center w-100">
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/share/1YDZQ8Kdyk/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                
+                <!-- Email Icon to Open Modal -->
+                <a class="btn btn-square btn-secondary rounded-circle me-2" href="#" data-bs-toggle="modal" data-bs-target="#emailModalAnand">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Email Modal for Anand -->
+    <div class="modal fade" id="emailModalAnand" tabindex="-1" aria-labelledby="emailModalAnandLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailModalAnandLabel">Contact Anand Kumar Ray</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Email: <strong>anandkray0@gmail.com</strong></p>
+                    <p>Click below to copy the email:</p>
+                    <button class="btn btn-primary" onclick="copyEmailAnand()">Copy Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript for Copying Anand's Email -->
+    <script>
+        function copyEmailAnand() {
+            navigator.clipboard.writeText("anand@gmail.com");
+            alert("Email copied to clipboard!");
+        }
+    </script>
+    
+    
+        </div>
+    </div>
+    
 
 <!-- Modal Card -->
 <div id="teamCard" class="team-modal">
@@ -439,23 +542,22 @@
                 role: "Founder & CEO",
                 description: "Amit Sigchi is a seasoned marketing leader with 15+ years of experience across the East Zone, including Northeast India, North Bengal, and Bhutan. His deep market insights and strategic vision have driven successful business expansions. Over the past five years, he has focused on the dairy sector, emerging as the top distributor of the Sonai brand by identifying key opportunities in Indrapur and Sonai. With a proven track record working with PepsiCo, Dabur, Lotte, and Britannia, Amit excels in market adaptation, strategic partnerships, and large-scale distribution. A visionary entrepreneur, he remains committed to innovation, excellence, and customer satisfaction.",
                 images: ["img/pepsico.png", "img/dabur.png", "img/lotte.png", "img/brit.png", "img/pepsico.png", "img/dabur.png", "img/lotte.png", "img/brit.png"]
-
             },
             "govind": {
                 name: "Govind Sigchi",
                 role: "CMO & COO",
                 description: "A dynamic leader in operations and marketing, Govind has been instrumental in scaling the business, ensuring smooth logistics, and building strong partnerships in the FMCG and dairy sectors. With over 15 years of sales and marketing experience, he has worked with top companies such as Godrej, Dabur, Emami, Rasna, Wrigley, Mars, Unibic, and Milky Mist. His expertise in driving business growth and strategic partnerships has significantly contributed to the success of various high-profile brands across multiple industries",
-                images: ["img/god.png", "img/dabur.png", "img/emami.png", "img/rasna.png", "img/wr.png", "img/mars.png", "img/unibic.png", "img/maq.png"]
-
+                images: ["img/god.png", "img/dabur.png", "img/emami.png", "img/rasna.png", "img/wr.png", "img/mars.png", "img/unibic.png" , "img/maq.png"]
             },
             "anand": {
                 name: "Anand Kumar Ray",
                 role: "CFO",
-                description: "Anand oversees the financial strategy and management of the company, bringing extensive experience in financial planning, risk assessment, and investment strategies that drive sustainable growth.",
-                images: ["img/pepsico.png", "img/dabur.png", "img/lotte.png", "img/brit.png", "img/pepsico.png", "img/dabur.png", "img/lotte.png", "img/brit.png"]
+                description: "Anand Kumar Ray, CFO, is an accomplished finance specialist with extensive experience in financial planning, risk assessment, investment strategies, and corporate finance. Having worked with leading companies, he has strong expertise in GST, taxation, and accounting, ensuring compliance and optimizing financial performance. With M.Com, PGDIBO, and B.Com(H) qualifications, Anand excels in budgeting, regulatory frameworks, and strategic financial management. His data-driven approach and innovative financial models drive sustainable growth, profitability, and long-term business success.",
+                images: ["img/white.png", "img/white.png", "img/white.png", "img/white.png", "img/white.png", "img/white.png", "img/white.png", "img/white.png"]
+
             }
         };
-
+        
         document.getElementById("teamName").innerText = data[member].name;
         document.getElementById("teamRole").innerText = data[member].role;
         document.getElementById("teamDescription").innerText = data[member].description;
@@ -481,7 +583,6 @@
 
 
 
-
     <!-- Team End -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -489,9 +590,50 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 99335 46572    </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-map-marker-alt me-3 mt-1"></i>
+                        <p class="mb-2">Kamala Vatika Satellite Township, Fulbari, Siliguri, West Bengal - 734004</p>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-phone-alt me-3 mt-1"></i>
+                        <p class="mb-2">+91 99335 46572, <br>
+                            +91 81167 57173</p>
+                    </div>
+                    <!-- Clickable Email Link -->
+<div class="d-flex align-items-start">
+    <i class="fa fa-envelope me-3 mt-1"></i>
+    <p class="mb-2">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#emailModal" class="text-white"><h5>Click here</h5></a>
+    </p>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emailModalLabel">Email Address</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p style="color: black; font-size: 18px; font-weight: bold;" id="emailText">
+                    jaishreebalajeetraders0305@gmail.com
+                </p>
+                <button class="btn btn-primary" onclick="copyEmail()">Copy Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to Copy Email -->
+<script>
+    function copyEmail() {
+        let emailText = document.getElementById("emailText").innerText;
+        navigator.clipboard.writeText(emailText);
+        alert("Email copied to clipboard!");
+    }
+</script>
+                    
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href="https://www.facebook.com/sonaimilk/"><i
                             class="fab fa-facebook-f"></i></a>
@@ -512,7 +654,55 @@
                     <a class="btn btn-link" href="../milky/about.html">Who We Are</a>
                     <a class="btn btn-link" href="../milky/product.html">Products</a>
                     <a class="btn btn-link" href="../milky/service.html">Offerings</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Condition</a>
+                    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                   
+
+                                    <h5 style="color: black; font-weight: bold;">1. Introduction</h5>
+                                    <p>Welcome to Jai Shree Balajee Traders (JSBT). By accessing our website and purchasing our products, you agree to abide by the following terms and conditions.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">2. Products and Services</h5>
+                                    <p>We offer a range of dairy products, subject to availability. Prices and product details are subject to change without prior notice.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">3. Orders and Cancellations</h5>
+                                    <p>Orders can be placed through our website. We reserve the right to accept or reject orders at our discretion. Cancellations must be made within a specified timeframe, as mentioned in our cancellation policy.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">4. Delivery</h5>
+                                    <p>Delivery times may vary based on location and availability. We strive to ensure timely delivery but are not responsible for delays due to unforeseen circumstances.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">5. Refunds and Returns</h5>
+                                    <p>If you receive a damaged or incorrect product, you may be eligible for a refund or replacement as per our return policy. Refunds will be processed within a reasonable timeframe.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">6. User Responsibilities</h5>
+                                    <p>Users are required to provide accurate information when applying for distributorship. Any misuse of the website, including fraudulent activities, may lead to account suspension.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">7. Privacy Policy</h5>
+                                    <p>We respect your privacy and ensure the protection of your personal information. For more details, please refer to our Privacy Policy.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">8. Limitation of Liability</h5>
+                                    <p>We are not liable for any indirect, incidental, or consequential damages arising from the use of our products or services.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">9. Changes to Terms</h5>
+                                    <p>We reserve the right to update these terms and conditions at any time. Continued use of our website implies acceptance of any modifications.</p>
+                            
+                                    <h5 style="color: black; font-weight: bold;">10. Contact Information</h5>
+                                    <p>For any queries or concerns, please contact us at <a href="mailto:jaishreebalajeetraders0305@gmail.com">jaishreebalajeetraders0305@gmail.com</a>.</p>
+                            
+                                    <p>Founder: Amit Sigchi</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <a class="btn btn-link" href="../milky/contact.html">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -542,7 +732,7 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                   
-                    Remodel By <a class="fw-semi-bold" href="https://www.linkedin.com/in/rishabh-mohata-b571142a4//"><b>Rishabh Mohata</b></a> 
+                    Remodel By <a class="fw-semi-bold" href="https://www.linkedin.com/in/rishabh-mohata-b571142a4//"><b style="color: black;">Rishabh Mohata</b></a> 
                       
                 </div>
             </div>
@@ -564,5 +754,10 @@
     <script src="../milky/lib/lightbox/js/lightbox.min.js"></script>
     <!-- Template Javascript -->
     <script src="../milky/js/main.js"></script>
+    <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </body>
 </html>
